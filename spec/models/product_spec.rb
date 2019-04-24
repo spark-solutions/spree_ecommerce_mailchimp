@@ -3,7 +3,7 @@ require "spec_helper"
 describe Spree::Product, type: :model do
   subject { build(:product) }
 
-  describe "mailchimp" do
+  shared_examples "mailchimp" do
     it "schedules mailchimp notification on product create" do
       subject.save!
 
@@ -18,9 +18,30 @@ describe Spree::Product, type: :model do
     end
   end
 
-  describe ".mailchimp_product" do
+  shared_examples ".mailchimp_product" do
     it "returns valid schema" do
       expect(subject.mailchimp_product).to match_json_schema("product")
     end
+  end
+
+  context 'product without dependencies' do
+    it_behaves_like 'mailchimp'
+    it_behaves_like '.mailchimp_product'
+  end
+
+  context 'product with image' do
+    let(:image) { create(:image) }
+    before { subject.images << image }
+
+    it_behaves_like 'mailchimp'
+    it_behaves_like '.mailchimp_product'
+  end
+
+  context 'product with variant' do
+    let(:variant) { build(:variant) }
+    before { subject.variants << variant }
+
+    it_behaves_like 'mailchimp'
+    it_behaves_like '.mailchimp_product'
   end
 end
