@@ -50,6 +50,10 @@ module SpreeMailchimpEcommerce
       end
     end
 
+    def upload_existing_products
+      UploadProductsJob.perform_later
+    end
+
     private
 
     # rubocop:disable Metrics/LineLength
