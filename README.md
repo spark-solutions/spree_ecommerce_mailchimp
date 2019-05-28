@@ -1,14 +1,14 @@
 # SpreeMailchimpEcommerce
-[![Build Status](https://travis-ci.org/spark-solutions/spree_mailchimp_ecommerce.svg?branch=master)](https://travis-ci.org/spark-solutions/spree_mailchimp_ecommerce)
-[![Maintainability](https://api.codeclimate.com/v1/badges/4f78be32523b539f2788/maintainability)](https://codeclimate.com/github/spark-solutions/spree_mailchimp_ecommerce/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4f78be32523b539f2788/test_coverage)](https://codeclimate.com/github/spark-solutions/spree_mailchimp_ecommerce/test_coverage)
+[![Build Status](https://travis-ci.org/spark-solutions/spree_ecommerce_mailchimp.svg?branch=master)](https://travis-ci.org/spark-solutions/spree_ecommerce_mailchimp)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4f78be32523b539f2788/maintainability)](https://codeclimate.com/github/spark-solutions/spree_ecommerce_mailchimp/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4f78be32523b539f2788/test_coverage)](https://codeclimate.com/github/spark-solutions/spree_ecommerce_mailchimp/test_coverage)
 
 
 ## Installation
 1. Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spree_mailchimp_ecommerce', github: 'spark-solutions/spree_mailchimp_ecommerce', branch: 'master'
+gem 'spree_mailchimp_ecommerce', github: 'spark-solutions/spree_ecommerce_mailchimp', branch: 'master'
 ```
 
 2. Install the gem using Bundler:
